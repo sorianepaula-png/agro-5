@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BioCampo Hub - Inteligência Sustentável</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <aside class="sidebar">
+            <div class="logo-area">
+                <h2>BioCampo 🌾</h2>
+                <span>Escola do Campo</span>
+            </div>
+            <nav class="nav-menu">
+                <a href="#" class="active">📊 Painel Geral</a>
+            </nav>
+            <div class="sidebar-footer">
+                <p>Agrinho 2026</p>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            <header class="top-header">
+                <div class="header-title">
+                    <h1>Painel de Monitoramento Agroecológico</h1>
+                    <p>Equilíbrio perfeito entre alta produtividade e preservação ambiental</p>
+                </div>
+            </header>
+
+            <div class="content-body">
+                
+                <section id="banner-boas-vindas" class="dashboard-card animate-fade" style="padding: 0; overflow: hidden; border: none; background: linear-gradient(135deg, #10b981, #047857);">
+                    <div style="display: grid; grid-template-columns: 1.2fr 1fr; align-items: center; min-height: 200px;">
+                        <div style="padding: 2.5rem; color: white;">
+                            <span style="background: rgba(255,255,255,0.2); padding: 0.3rem 0.8rem; border-radius: 20px; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px;">Projeto Escolar Autoral</span>
+                            <h2 style="color: white; font-size: 1.8rem; margin-top: 0.6rem; margin-bottom: 0.5rem; font-weight: 800;">Agro Forte, Futuro Sustentável</h2>
+                            <p style="color: #e6f4ea; font-size: 0.95rem; line-height: 1.4;">Plataforma inteligente desenvolvida por estudantes da Rede Pública Estadual do Paraná para análise de impacto ambiental e difusão de práticas regenerativas no campo.</p>
+                        </div>
+                        <div style="padding: 1rem; display: flex; justify-content: center; align-items: center;">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="160" height="160">
+                                <circle cx="100" cy="100" r="90" fill="rgba(255,255,255,0.15)"/>
+                                <circle cx="100" cy="80" r="25" fill="#f59e0b" opacity="0.8"/>
+                                <path d="M40 150 Q100 110 160 150 L160 190 L40 190 Z" fill="#34d399"/>
+                                <path d="M20 165 Q100 135 180 165 L180 190 L20 190 Z" fill="#059669"/>
+                                <g transform="translate(100,110) scale(1.2)">
+                                    <path d="M0 0 Q10 -20 20 -20 Q10 -5 0 0" fill="#a7f3d0"/>
+                                    <path d="M0 0 Q-10 -20 -20 -20 Q-10 -5 0 0" fill="#a7f3d0"/>
+                                    <line x1="0" y1="0" x2="0" y2="30" stroke="#ffffff" stroke-width="3"/>
+                                </g>
+                            </svg>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="simulador-section" class="dashboard-card animate-fade">
+                    <h3>🛠️ Iniciar Novo Diagnóstico da Propriedade</h3>
+                    <p class="section-desc">Insira os dados da lavoura comunitária para calcular o índice ecológico real.</p>
+                    
+                    <form id="agro-form">
+                        <div class="input-grid">
+                            <div class="form-control">
+                                <label for="produtor">Nome do Produtor / Sítio</label>
+                                <input type="text" id="produtor" required placeholder="Ex: Sítio Oliveira">
+                            </div>
+                            <div class="form-control">
+                                <label for="hectares">Área Total (Hectares)</label>
+                                <input type="number" id="hectares" min="1" required placeholder="Ex: 25">
+                            </div>
+                        </div>
+
+                        <div class="form-control">
+                            <label>Selecione o Manejo Atual da Lavoura</label>
+                            <div class="radio-card-grid">
+                                <label class="radio-card">
+                                    <input type="radio" name="manejo" value="alto" required>
+                                    <div class="radio-content">
+                                        <span class="emoji">🌱</span>
+                                        <h4>Manejo Regenerativo</h4>
+                                        <p>Rotação de culturas, adubação verde e zero defensivos químicos pesados.</p>
+                                    </div>
+                                </label>
+
+                                <label class="radio-card">
+                                    <input type="radio" name="manejo" value="medio">
+                                    <div class="radio-content">
+                                        <span class="emoji">🚜</span>
+                                        <h4>Manejo Integrado</h4>
+                                        <p>Uso misto de controle biológico com manejo convencional controlado.</p>
+                                    </div>
+                                </label>
+
+                                <label class="radio-card">
+                                    <input type="radio" name="manejo" value="baixo">
+                                    <div class="radio-content">
+                                        <span class="emoji">⚠️</span>
+                                        <h4>Manejo Intensivo</h4>
+                                        <p>Monocultura contínua com alta dependência de insumos químicos.</p>
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="btn-primary">Gerar Relatório Inteligente →</button>
+                    </form>
+                </section>
+
+                <section id="resultado-section" class="dashboard-card animate-fade hidden">
+                    <div class="result-header">
+                        <h3>📊 Relatório de Impacto Ambiental</h3>
+                        <button id="btn-voltar" class="btn-secondary">← Novo Teste</button>
+                    </div>
+
+                    <div class="dashboard-grid">
+                        <div class="metric-card main-metric">
+                            <h4>Índice de Sustentabilidade</h4>
+                            <div class="progress-circle-placeholder">
+                                <span id="txt-porcentagem">0%</span>
+                            </div>
+                            <p id="txt-status" class="status-badge">Analisando...</p>
+                        </div>
+
+                        <div class="metric-card info-metric">
+                            <h4>Diagnóstico da Escola do Campo</h4>
+                            <p id="txt-diagnostico">Carregando dados da lavoura...</p>
+                            <div class="recomenda-box">
+                                <h5>💡 Recomendação Técnica dos Alunos:</h5>
+                                <p id="txt-recomendacao">Aguardando análise.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="materiais-section" class="dashboard-card animate-fade">
+                    <h3>📚 Central de Conteúdos da Escola do Campo</h3>
+                    <p class="section-desc">Acesse os materiais validados pela equipe técnica de estudantes e instituições parceiras.</p>
+                    
+                    <div class="radio-card-grid">
+                        <a href="https://youtube.com/shorts/FHraCDyIhrI?si=nQWpTg8aAR6qLqGH" target="_blank" style="text-decoration: none; color: inherit;">
+                            <div class="radio-content" style="border-color: var(--accent-orange); background-color: rgba(245, 158, 11, 0.03); border-width: 2px; border-style: solid;">
+                                <span class="emoji">🎥</span>
+                                <h4>Assistir à Videoaula</h4>
+                                <p>Veja a nossa explicação prática em vídeo sobre sustentabilidade produzida para a comunidade urbana.</p>
+                                <span style="display: inline-block; margin-top: 1rem; color: var(--accent-orange); font-weight: bold; font-size: 0.85rem;">Abrir no YouTube Shorts →</span>
+                            </div>
+                        </a>
+
+                        <a href="https://www.infoteca.cnptia.embrapa.br/bitstream/doc/498802/1/doc90.pdf" target="_blank" style="text-decoration: none; color: inherit;">
+                            <div class="radio-content" style="border-color: var(--accent-green); background-color: rgba(16, 185, 129, 0.03); border-width: 2px; border-style: solid;">
+                                <span class="emoji">📄</span>
+                                <h4>Manual Técnico Embrapa</h4>
+                                <p>Abra as diretrizes oficiais de Adubação Verde e conservação dos solos agrícolas para download.</p>
+                                <span style="display: inline-block; margin-top: 1rem; color: var(--accent-green); font-weight: bold; font-size: 0.85rem;">Fazer Download do PDF →</span>
+                            </div>
+                        </a>
+                    </div>
+                </section>
+
+            </div>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
